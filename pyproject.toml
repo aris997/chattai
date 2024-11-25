@@ -1,0 +1,7 @@
+[project]
+name = "chattai"
+version = "0.1.0"
+description = "A simple chat for myself with Auth feature"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
