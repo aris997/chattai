@@ -4,4 +4,8 @@ version = "0.1.0"
 description = "A simple chat for myself with Auth feature"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "flask>=3.1.0",
+    "flask-bcrypt>=1.0.1",
+    "flask-jwt-extended>=4.7.1",
+]

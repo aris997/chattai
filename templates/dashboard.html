@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Welcome to Your Dashboard, {{ user }}!</h1>
+    <p>This is a protected route. Only logged-in users can see this page.</p>
+    <button class="btn btn-danger" id="logout">Logout</button>
+  </div>
+
+  <script>
+  document.getElementById('logout').addEventListener('click', async () => {
+    try {
+      const response = await fetch('/logout', { method: 'POST' });
+      if (response.ok) {
+        // alert('Logged out successfully.');
+        window.location.href = '/';
+      } else {
+        alert('Failed to log out.');
+      }
+    } catch (error) {
+      console.error('Error during logout:', error);
+      alert('An error occurred. Please try again.');
+    }
+  });
+  </script>
+</body>
+</html>
