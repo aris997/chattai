@@ -11,3 +11,7 @@ wheels/
 
 # ruff generated files
 .ruff_cache
+.idea
+
+# secrets
+credentials-db/secrets/
